@@ -2,7 +2,7 @@
 
 This project is designed to run on one server with:
 
-- Next.js frontend on `127.0.0.1:3000`
+- Next.js frontend on `127.0.0.1:19000`
 - FastAPI backend on `127.0.0.1:8000`
 - Nginx on port `80`
 - MySQL on the same server
@@ -22,7 +22,7 @@ Frontend production: copy `frontend/.env.production.example` to `frontend/.env.p
 ## 3. Production networking
 
 - Public URL: `http://1.201.125.195`
-- Frontend proxy target: `127.0.0.1:3000`
+- Frontend proxy target: `127.0.0.1:19000`
 - Backend proxy target: `127.0.0.1:8000`
 - MySQL should not be exposed publicly
 
