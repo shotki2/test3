@@ -20,10 +20,10 @@ interface Categories {
 
 const COLUMNS: { key: keyof Spec; label: string; width?: string }[] = [
   { key: "category1", label: "구분(1단계)", width: "w-24" },
-  { key: "category2", label: "구분(2단계)", width: "w-20" },
-  { key: "country", label: "국가", width: "w-14" },
-  { key: "stage", label: "단계", width: "w-16" },
-  { key: "status", label: "상태", width: "w-16" },
+  { key: "category2", label: "구분(2단계)", width: "w-24" },
+  { key: "country", label: "국가", width: "w-20" },
+  { key: "stage", label: "단계", width: "w-20" },
+  { key: "status", label: "상태", width: "w-20" },
   { key: "ais_number", label: "AIS 번호", width: "w-28" },
   { key: "name", label: "명칭" },
   { key: "related_number", label: "관련 번호", width: "w-32" },
@@ -132,7 +132,7 @@ export default function Home() {
                     <td key={key} className="px-3 py-2.5">
                       {key === "category1" ? (<span className={"px-2 py-0.5 rounded-full text-xs font-medium " + categoryColor(spec[key] || "")}>{spec[key]}</span>)
                       : key === "status" ? (<span className={"px-2 py-0.5 rounded-full text-xs font-medium " + statusColor(spec[key] || "")}>{spec[key]}</span>)
-                      : (<span className="truncate block max-w-xs" title={spec[key] as string || ""}>{spec[key] as string}</span>)}
+                      : (<span className="block break-words" title={spec[key] as string || ""}>{spec[key] as string}</span>)}
                     </td>
                   ))}
                   <td className="px-3 py-2.5 text-center">

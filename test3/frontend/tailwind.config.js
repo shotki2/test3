@@ -2,6 +2,6 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   darkMode: "class",
-  theme: { extend: {} },
+  theme: { extend: { fontFamily: { sans: ['A2z', 'sans-serif'] } } },
   plugins: [],
 };
